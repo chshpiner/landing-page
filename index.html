@@ -1,82 +1,87 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2761
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh14840\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chany Shpiner-Vogel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      padding: 30px 20px;
+      max-width: 480px;
+      width: 100%;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 10px 0 5px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      color: #666;
+      margin: 0 0 30px;
+    }
+    .link {
+      display: block;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 14px;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+    .link:hover {
+      background: #e3f2fd;
+      border-color: #90caf9;
+      color: #000;
+    }
+    footer {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
 
-\f0\fs24 \cf0 <!-- index.html (English Version) -->\
-<!DOCTYPE html>\
-<html lang="en">\
-<head>\
-  <meta charset="UTF-8" />\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
-  <title>Chany Shpiner-Vogel</title>\
-  <style>\
-    body \{\
-      margin: 0;\
-      padding: 0;\
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\
-      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);\
-      color: #333;\
-      text-align: center;\
-    \}\
-    .container \{\
-      max-width: 500px;\
-      margin: 60px auto;\
-      padding: 30px;\
-      background-color: white;\
-      border-radius: 20px;\
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\
-    \}\
-    img \{\
-      width: 140px;\
-      height: 140px;\
-      border-radius: 50%;\
-      object-fit: cover;\
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\
-    \}\
-    h1 \{\
-      font-size: 2.2em;\
-      margin: 20px 0 5px;\
-    \}\
-    h2 \{\
-      font-size: 1.1em;\
-      color: #555;\
-      margin-bottom: 25px;\
-    \}\
-    .links \{\
-      display: flex;\
-      flex-wrap: wrap;\
-      justify-content: center;\
-      gap: 12px;\
-    \}\
-    .links a \{\
-      padding: 12px 24px;\
-      text-decoration: none;\
-      color: white;\
-      background: #0073e6;\
-      border-radius: 25px;\
-      font-size: 0.95em;\
-      transition: transform 0.2s, background 0.3s;\
-    \}\
-    .links a:hover \{\
-      background: #005bb5;\
-      transform: scale(1.05);\
-    \}\
-  </style>\
-</head>\
-<body>\
-  <div class="container">\
-    <img src="profile.jpg" alt="Chany's Profile Picture" />\
-    <h1>Chany Shpiner-Vogel</h1>\
-    <h2>Software Engineer @ Google</h2>\
-    <div class="links">\
-      <a href="#">Instagram</a>\
-      <a href="#">LinkedIn</a>\
-      <a href="#">YouTube</a>\
-      <a href="#">Email</a>\
-    </div>\
-  </div>\
-</body>\
-</html>}
+  <div class="container">
+    <img src="profile.jpg" alt="Chany Profile" class="profile-img">
+    <h1>Chany Shpiner-Vogel</h1>
+    <h2>Software Engineer @ Google</h2>
+
+    <a href="#" class="link">🌸 Instagram</a>
+    <a href="#" class="link">💼 LinkedIn</a>
+    <a href="#" class="link">👩‍💻 GitHub</a>
+    <a href="#" class="link">📱 WhatsApp</a>
+    <a href="mailto:youremail@example.com" class="link">📩 Email Me</a>
+
+    <footer>Made with ❤️ by Chany</footer>
+  </div>
+
+</body>
+</html>
