@@ -7,62 +7,82 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-7HqQ8z8Z9jkDZsnNwzptDSePKOa9vZ+z+dOiXe5xEvZzAqz2CFKf5ZfAWY5Zn8oZLFUdrhUpEl9CU4xkGpHnRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/2d3fbab840.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
       font-family: 'Heebo', sans-serif;
-      background-color: #f3f6f9;
-      color: #2c3e50;
+      background: linear-gradient(135deg, #fff0eb, #fde2d3);
+      color: #3d2c29;
       text-align: center;
       direction: rtl;
     }
+
     .container {
       max-width: 480px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      margin: 60px auto;
+      padding: 30px 20px;
+      background-color: #fff8f3;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
     }
+
     .profile-img {
       width: 140px;
       height: 140px;
-      border-radius: 50%;
       object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin-bottom: 20px;
-      border: 3px solid #d0d7e2;
+      border: 3px solid #eab39b;
     }
+
     h1 {
-      margin: 0;
       font-size: 24px;
+      margin: 10px 0 5px;
     }
-    p.description {
+
+    h2 {
       font-size: 16px;
-      color: #555;
-      margin: 15px 0 30px;
+      font-weight: normal;
+      color: #6c4f45;
+      margin: 0 0 10px;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #5a3f36;
+      margin-bottom: 25px;
       line-height: 1.6;
     }
-    .links a {
+
+    .link {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #e0e7ef;
-      color: #1f2937;
+      background-color: #f3d4c4;
+      border: 1px solid #eab39b;
+      border-radius: 12px;
+      padding: 14px;
+      margin: 10px 0;
       text-decoration: none;
-      padding: 12px 16px;
-      margin: 8px 0;
-      border-radius: 8px;
-      transition: background 0.2s;
-      font-weight: 500;
+      color: #3d2c29;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.2s ease;
     }
-    .links a:hover {
-      background: #d1dce9;
+
+    .link:hover {
+      background: #fbe1d5;
+      color: #000;
     }
-    .links i {
-      font-size: 18px;
+
+    footer {
+      font-size: 12px;
+      color: #a17a6f;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -70,33 +90,35 @@
   <div class="container">
     <img src="20250121_130038.jpg" alt="חני שפינר-ווגל" class="profile-img">
     <h1>חני שפינר-ווגל</h1>
-    <p class="description">
-      מקדמת חינוך טכנולוגי לדור הבא<br>
-      עוזרת לכם לתת לילדיכם יתרון טכנולוגי<br>
-      מקדמת נשים בהייטק, מנטורית ומרצה<br>
-      עקבו לתוכן מעשי, טיפים והשראה!
-    </p>
+    <h2>מהנדסת תוכנה @ גוגל</h2>
 
-    <div class="links">
-      <a class="button" href="https://instagram.com/chanyshpiner" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> אינסטגרם
-      </a>
-        <a class="button" href="https://linkedin.com/in/chana-shpiner/" target="_blank">
-          <i class="fab fa-linkedin"></i> לינקדאין
-        </a>
-        <a class="button" href="https://facebook.com/chaniart" target="_blank">
-          <i class="fab fa-facebook"></i> פייסבוק
-        </a>
-        <a class="button" href="https://wa.me/+972523770733?text=!lets+connect" target="_blank">
-          <i class="fab fa-whatsapp"></i> סטטוס וואטסאפ
-        </a>
-        <a class="button" href="https://chat.whatsapp.com/BAdfR7KHsh4HlOPfAWZVld" target="_blank">
-          <i class="fab fa-whatsapp"></i> קבוצת וואטסאפ
-        </a>
-        <a class="button" href="https://whatsapp.com/channel/0029Vb1shVbIHphCUxFhfp2Z" target="_blank">
-          <i class="fab fa-whatsapp"></i> ערוץ וואטסאפ
-        </a>
+    <div class="description">
+       מקדמת חינוך טכנולוגי לדור הבא<br>
+       עוזרת לכם לתת לילדיכם יתרון טכנולוגי<br>
+       מקדמת נשים בהייטק, מנטורית ומרצה<br>
+       עקבו לתוכן מעשי, טיפים והשראה!
     </div>
+
+    <a href=״https://instagram.com/chanyshpiner" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i> אינסטגרם
+    </a>
+    <a href="https://linkedin.com/in/chana-shpiner/" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i> לינקדאין
+    </a>
+    <a href="https://facebook.com/chaniart" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i> פייסבוק
+    </a>
+    <a href="https://wa.me/+972523770733?text=!lets+connect" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i> סטטוס וואטסאפ
+    </a>
+      <a href="https://chat.whatsapp.com/BAdfR7KHsh4HlOPfAWZVld" target="_blank" rel="noopener noreferrer"></a>
+        <i class="fab fa-whatsapp"></i> קבוצת וואטסאפ
+      </a>
+      <a href="https://whatsapp.com/channel/0029Vb1shVbIHphCUxFhfp2Z" target="_blank" rel="noopener noreferrer"></a>
+        <i class="fab fa-whatsapp"></i> ערוץ וואטסאפ
+      </a>
+      
+    <footer>נבנה באהבה 💖 על ידי חני</footer>
   </div>
 </body>
 </html>
