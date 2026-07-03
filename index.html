@@ -7,89 +7,155 @@
   <title>חני שפינר-ווגל</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2d3fbab840.js" crossorigin="anonymous"></script>
   <style>
-    /* --- הגדרות כלליות - נקיות ומינימליסטיות --- */
+    /* --- הגדרות כלליות - Dark Mode קריר ונועז --- */
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       font-family: 'Heebo', sans-serif;
-      color: #333333;
+      /* רקע כהה ועמוק עם גרדיאנט שמתכתב עם התאורה בתמונה */
+      background: #0B1120;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(20, 184, 166, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 90%, rgba(56, 189, 248, 0.15) 0%, transparent 40%);
+      color: #E2E8F0;
       text-align: center;
       direction: rtl;
-      background-color: #F8F7F3; /* רקע בהיר וניטרלי */
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* --- הקונטיינר הראשי - ללא הצללות מורכבות --- */
+    /* --- הקונטיינר הראשי - אפקט Glassmorphism --- */
     .container {
-      max-width: 480px;
-      margin: 40px auto;
-      padding: 32px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03); /* הצללה עדינה מאוד */
+      width: 100%;
+      max-width: 440px;
+      margin: 20px auto;
+      padding: 48px 32px;
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
 
-    /* --- תמונת פרופיל - נקייה --- */
+    /* --- תמונת פרופיל - בולטת וזוהרת --- */
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 24px;
-      border: 4px solid #ffffff; /* מסגרת לבנה נקייה */
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* הצללה קלה */
+      /* מסגרת קרה שמתכתבת עם רקע התמונה */
+      border: 3px solid #14B8A6; 
+      box-shadow: 0 0 25px rgba(20, 184, 166, 0.3);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    /* --- טקסטים וכותרות - ממוקדים --- */
+    .profile-img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 35px rgba(20, 184, 166, 0.5);
+        border-color: #2DD4BF;
+    }
+
+    /* --- טקסטים וכותרות --- */
     h1 {
-      font-size: 26px;
-      font-weight: 500;
-      margin: 0 0 8px;
-      color: #222222;
+      font-size: 32px;
+      font-weight: 800;
+      margin: 0 0 4px;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
     }
 
     h2 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
-      color: #777777;
-      margin: 0 0 20px;
+      /* צבע כחול-טורקיז קריר להדגשת התפקיד */
+      color: #2DD4BF; 
+      margin: 0 0 24px;
+      letter-spacing: 0.5px;
     }
 
     .description {
-      font-size: 15px;
-      color: #555555;
-      margin-bottom: 32px;
-      line-height: 1.7;
+      font-size: 16px;
+      color: #94A3B8;
+      margin-bottom: 36px;
+      line-height: 1.6;
+      font-weight: 300;
     }
 
-    /* --- קישורים - פשוטים וללא הצללות מורכבות --- */
+    /* --- קישורים - עיצוב אדג'י --- */
     .link {
-      display: block;
-      background-color: #ffffff;
-      border: 1px solid #e0e0e0; /* מסגרת דקה */
-      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-right: 3px solid transparent; /* הכנה לאפקט הריחוף בצד ימין (RTL) */
+      border-radius: 10px;
       padding: 16px;
-      margin: 10px 0;
+      margin: 12px 0;
       text-decoration: none;
-      color: #333333;
-      font-size: 15px;
-      font-weight: 400;
+      color: #F1F5F9;
+      font-size: 16px;
+      font-weight: 500;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .link i {
+        font-size: 20px;
+        color: #94A3B8;
+        transition: color 0.3s ease;
     }
 
     .link:hover {
-      background-color: #F8F7F3; /* שינוי רקע קל בריחוף */
-      border-color: #d0d0d0;
-      transform: translateY(-1px); /* אפקט עדין */
+      background: rgba(20, 184, 166, 0.1); /* רקע טורקיז עדין */
+      border-color: rgba(20, 184, 166, 0.3);
+      border-right: 3px solid #14B8A6; /* פס הדגשה נועז */
+      transform: translateX(-4px); /* תזוזה קלה שמאלה בריחוף */
+      color: #FFFFFF;
     }
 
-    /* --- פוטר - מינימליסטי --- */
+    .link:hover i {
+        color: #2DD4BF;
+    }
+    
+    /* אנימציית כניסה */
+    .link {
+        opacity: 0;
+        transform: translateY(15px);
+        animation: slideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    .link:nth-child(4) { animation-delay: 0.1s; }
+    .link:nth-child(5) { animation-delay: 0.2s; }
+    .link:nth-child(6) { animation-delay: 0.3s; }
+    .link:nth-child(7) { animation-delay: 0.4s; }
+    .link:nth-child(8) { animation-delay: 0.5s; }
+    .link:nth-child(9) { animation-delay: 0.6s; }
+    .link:nth-child(10) { animation-delay: 0.7s; }
+
+    @keyframes slideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0) translateX(0);
+        }
+    }
+
+    /* --- פוטר --- */
     footer {
       font-size: 13px;
-      color: #aaaaaa;
-      margin-top: 40px;
+      color: #64748B;
+      margin-top: 48px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
@@ -101,14 +167,31 @@
 
     <div class="description">
        פועלת לקידום נשים בהייטק וחינוך טכנולוגי לדור הבא.<br>
-       מרצה, מנטורית ומשתפת תובנות מהשטח.
+       מרצה, מנטורית ומשתפת ידע מהשטח.
     </div>
 
-    <a href="https://linkedin.com/in/chana-shpiner/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://www.instagram.com/chanyshpiner/" class="link" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://forms.gle/vDY5EoHJpwpQCZM68" class="link" target="_blank" rel="noopener noreferrer">קהילת הסטודנטיות</a>
-    <a href="https://wa.me/+972523770733?text=!lets+connect" class="link" target="_blank" rel="noopener noreferrer">יצירת קשר</a>
-
+    <a href="https://linkedin.com/in/chana-shpiner/" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://forms.gle/vDY5EoHJpwpQCZM68" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i> קהילת הסטודנטיות
+    </a>
+    <a href="https://www.instagram.com/chanyshpiner/" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://chat.whatsapp.com/BAdfR7KHsh4HlOPfAWZVld" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i> קבוצת עדכונים שקטה
+    </a>
+    <a href="https://whatsapp.com/channel/0029Vb1shVbIHphCUxFhfp2Z" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i> ערוץ WhatsApp
+    </a>
+    <a href="https://facebook.com/chaniart" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+    <a href="https://wa.me/+972523770733?text=!lets+connect" class="link" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-envelope"></i> יצירת קשר
+    </a>
+      
     <footer>נבנה באהבה 3> על ידי חני</footer>
   </div>
 </body>
